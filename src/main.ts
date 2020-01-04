@@ -8,5 +8,11 @@ if (environment.production) {
   enableProdMode();
 }
 
+
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.log(err));
+
+  /*
+   Je pratique git : system de vesionning et de collaboration.
+
+  */
