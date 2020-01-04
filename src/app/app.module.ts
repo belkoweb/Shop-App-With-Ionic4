@@ -9,13 +9,34 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import {CartPageModule} from "./pages/cart/cart.module";
+import {IonicStorageModule} from "@ionic/storage";
+import {MethodService} from "./method.service";
+import {HttpClientModule} from "@angular/common/http";
+import { ImagePicker } from '@ionic-native/image-picker/ngx';
+import {ImagesViewComponent} from "./components/images-view/images-view.component";
+import {ImagesViewServiceService} from "./services/images-view-service.service";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  declarations: [AppComponent,ImagesViewComponent],
+  entryComponents: [ImagesViewComponent],
+  imports: [
+      BrowserAnimationsModule,
+      BrowserModule,
+      IonicStorageModule.forRoot(),
+      IonicModule.forRoot(),
+      AppRoutingModule,
+      CartPageModule,
+      HttpClientModule
+  ],
   providers: [
-    StatusBar,
-    SplashScreen,
+        HttpClientModule,
+      ImagesViewServiceService,
+         ImagePicker,
+        MethodService,
+      StatusBar,
+      SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

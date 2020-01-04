@@ -1,0 +1,25 @@
+ion-card{
+  width: 100vw!important;
+  margin:auto!important;
+}
+
+
+
+.iconYellow {
+  color: #f4e242
+}
+
+
+.myImg{
+  width: 70%;
+  margin: auto;
+}
+rating {
+  ion-icon {
+    color: gray;
+    &.filled {
+      color: #ffb400;
+    }
+  }
+}
+

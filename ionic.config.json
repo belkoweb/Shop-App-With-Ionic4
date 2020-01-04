@@ -1,5 +1,7 @@
 {
   "name": "IBoutique",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

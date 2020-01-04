@@ -1,0 +1,56 @@
+<ion-menu contentId="content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list padding >
+      <ion-item-divider color="primary">
+        <ion-label>
+           Categories
+        </ion-label>
+      </ion-item-divider>
+      <ion-item button *ngFor="let category of categories ">
+          <ion-icon slot="start" [name]="category.icon"></ion-icon>
+            <ion-label>
+           <h2>{{category.title}}</h2>
+           <p>{{category.description}}</p>
+            </ion-label>
+      </ion-item>
+      <ion-item-divider color="primary">
+        <ion-label>
+          Mon Compte
+        </ion-label>
+      </ion-item-divider>
+      <ion-item button>
+        <ion-icon slot="start" name="contact"></ion-icon>
+        <ion-label>
+          <h2>IBoutique</h2>
+          <p>Bienvenu</p>
+        </ion-label>
+      </ion-item>
+      <ion-item button>
+        <ion-icon slot="start" name="mail"></ion-icon>
+        <ion-label>
+          <h2>Messages</h2>
+          <p>Consulter </p>
+        </ion-label>
+      </ion-item>
+      <ion-item button>
+        <ion-icon slot="start" name="cart"></ion-icon>
+        <ion-label>
+          <h2>Mon Panier</h2>
+          <p>Consulter </p>
+        </ion-label>
+      </ion-item>
+      <ion-item button>
+        <ion-icon slot="start" name="help-circle"></ion-icon>
+        <ion-label>
+          <h2>A propos</h2>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="content"> </ion-router-outlet>
